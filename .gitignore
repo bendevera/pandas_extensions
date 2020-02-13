@@ -1,1 +1,4 @@
 books.csv
+build
+dist
+pandas_extensions.egg-info
