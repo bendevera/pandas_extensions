@@ -2,7 +2,7 @@
 
 author: Ben de Vera
 
-view at: https://test.pypi.org/project/pandas-extensions/0.1/
+[![pypi tag](https://img.shields.io/badge/pypi-0.1-success)](https://test.pypi.org/project/pandas-extensions/0.1/)
 
 ## classes
 
