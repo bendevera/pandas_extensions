@@ -34,6 +34,6 @@ Extension of the pandas.DataFrame class that adds additional methods.
 
 Naive check for whether DataFrames can merge
 
-Params
-    df1 : pandas.DataFrame
-    df2 : pandas.DataFrame
+    - Params
+        df1 : pandas.DataFrame
+        df2 : pandas.DataFrame
