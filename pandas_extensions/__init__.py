@@ -1,1 +1,2 @@
 from pandas_extensions.classes import SuperDataFrame
+from pandas_extensions.functions import could_merge

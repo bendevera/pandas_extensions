@@ -11,6 +11,7 @@ class SuperDataFrame(pd.DataFrame):
 
         Params
             self : pandas.DataFrame
+            verbose : boolean
         """
         if verbose:
             print("-"*8 + " NULL REPORT " + "-"*8)
@@ -19,18 +20,23 @@ class SuperDataFrame(pd.DataFrame):
             curr_count = self[column].isnull().sum()
             memory[column] = curr_count
             if verbose:
-                print(f"{column} null count: ", curr_count)
+                print(f"{column} null count: {curr_count}")
         return memory
 
-    def train_test_val_split(self, verbose=False):
+    def train_test_val_split(self, train_size=.7, test_size=.15, verbose=False):
         """
         Provides a train/test/val split of a pandas.DataFrame
 
         Params 
             self : pandas.DataFrame
+            train_size : float 
+            test_size : float
+            verbose : boolean
         """
-        train_end = int(.7 * self.shape[0])
-        test_end = train_end + int(.15 * self.shape[0])
+        if train_size + test_size >= 1:
+            raise ValueError
+        train_end = int(train_size * self.shape[0])
+        test_end = train_end + int(test_size * self.shape[0])
         data = self.copy()
         train = data[:train_end]
         test = data[train_end:test_end]

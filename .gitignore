@@ -1,4 +1,6 @@
 books.csv
+.books.csv.icloud
+Pipfile.lock
 build
 dist
 pandas_extensions.egg-info
