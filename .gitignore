@@ -4,3 +4,4 @@ Pipfile.lock
 build
 dist
 pandas_extensions.egg-info
+.DS_Store

@@ -14,5 +14,8 @@ setup(
     license="MIT",
     url="https://github.com/bendevera/pandas_extensions.git",
     keywords="data tools pandas",
-    packages=find_packages() # ["game_utils"]
+    packages=find_packages(),
+    install_requires=[
+        "pandas"
+    ]
 )
